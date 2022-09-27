@@ -1,5 +1,6 @@
 import { createAction, handleActions } from "redux-actions";
 
+const CHANGE_INPUT = "todo/CHANGE_INPUT";
 const ADD = "todo/ADD";
 const TOGGLE = "todo/TOGGLE";
 const REMOVE = "todo/REMOVE";
@@ -12,6 +13,8 @@ export const add = createAction(ADD, (text) => ({
   text,
   done: false,
 }));
+
+export const changeInput = createAction(CHANGE_INPUT, (input) => input);
 
 export const toggle = createAction(TOGGLE, (id) => id);
 
@@ -35,6 +38,7 @@ const initialState = {
 
 const todo = handleActions(
   {
+    [CHANGE_INPUT]: (state, { payload: input }) => ({ ...state, input }),
     [ADD]: (state, { payload: todo }) => ({
       ...state,
       todos: state.todos.concat(todo),
@@ -44,6 +48,10 @@ const todo = handleActions(
       todos: state.todos.map((todo) =>
         todo.id === id ? { ...todo, done: !todo.done } : todo
       ),
+    }),
+    [REMOVE]: (state, { payload: id }) => ({
+      ...state,
+      todos: state.todos.filter((todo) => todo.id !== id),
     }),
   },
   initialState
