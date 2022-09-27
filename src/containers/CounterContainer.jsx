@@ -10,9 +10,12 @@ const CounterContainer = () => {
   const onDecrease = useCallback(() => dispatch(decrease()), [dispatch]);
   return (
     <div>
-      <h1>{number}</h1>
-      <button onClick={onIncrease}>plus</button>
-      <button onClick={onDecrease}>minus</button>
+      <h3>counter redux</h3>
+      <div style={{border:'1px solid black', padding:'8px', width:'50%'}}>
+        <h1>{number}</h1>
+        <button onClick={onIncrease}>plus</button>
+        <button onClick={onDecrease}>minus</button>
+      </div>
     </div>
   );
 };
