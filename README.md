@@ -9,8 +9,8 @@
 
 - Provider (O)
 - store (O)
-- createStore / configureStore (X)
-- combineReducers (X)
+- createStore / configureStore (O)
+- combineReducers (O)
 - reducer (X)
 - createAction (X)
 - handleActions (X)
