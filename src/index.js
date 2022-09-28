@@ -6,9 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./modules";
+import todo from "./modules/todo";
+import counter from "./modules/counter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const store = configureStore({ reducer: rootReducer });
+// const store = configureStore({ reducer: rootReducer });
+const store = configureStore({ reducer: { counter, todo } });
 root.render(
   <Provider store={store}>
     <App />
