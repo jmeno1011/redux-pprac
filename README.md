@@ -7,12 +7,12 @@
 
 ## 구아ㅏㅏ아아악 `리덕스` 하면서 알아야되는 것들
 
-- Provider
-- store
-- createStore / configureStore
-- combineReducers
-- reducer
-- createAction
-- handleActions
-- useDispatch
-- useSelector
+- Provider (O)
+- store (O)
+- createStore / configureStore (X)
+- combineReducers (X)
+- reducer (X)
+- createAction (X)
+- handleActions (X)
+- useDispatch (X)
+- useSelector (O)
