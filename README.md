@@ -2,8 +2,9 @@
 
 - npm install redux
 - npm install react-redux
-- npm install @reduxjstoolkit
+- npm install @reduxjs/toolkit
 - npm install redux-actions
+=> npm install redux react-redux @reduxjs/toolkit redux-actions
 
 ## 구아ㅏㅏ아아악 `리덕스` 하면서 알아야되는 것들
 
